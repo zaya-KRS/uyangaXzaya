@@ -1,0 +1,96 @@
+
+body
+{
+    background-color:#334230;
+    max-width: 100%;
+    max-height: 100%;
+}
+.nav_menu
+{
+    width:100em;
+    background-color: red;
+    z-index: 2;
+    height: 200px;
+}
+.wrapper
+{
+    position: absolute;
+    top:45%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width: 30%;
+}
+path{
+    stroke:#fff;
+    fill:#fff;
+    stroke-dasharray: 1800;
+    opacity: 10;
+    animation: animate 3s cubic-bezier(0, 0.23, 1, 1);
+
+}
+@keyframes animate
+{
+    0% { opacity: 0;
+        fill: none;
+        stroke-dashoffset: 1800;
+
+    }
+    30%{
+        opacity: 10;
+        fill: none;
+        stroke-dashoffset: 1800;
+    }
+    50%{
+        fill:rgba(255 , 255 , 255 , 0);
+    }
+    70%{
+        fill:rgba(255 , 255 , 255 , 0);
+    }
+    90%{
+        fill:rgba(255 , 255 , 255 , 1);
+    }
+    100%{
+        opacity: 10;
+        fill: rgba(255 , 255 , 255 , 1);
+        stroke-dashoffset: 1800;
+    }
+}
+@media screen and (max-width:375px)
+{
+    body{
+        background-color: blue;
+    }
+}
+@media screen and(max-width:600px)
+{
+    body{
+        background-color: olive;
+    }
+}
+#projects{
+    font-size: 20px;
+    font-family: 'roboto';
+    color: #7b9174;
+    margin-bottom:-5px ;
+    text-decoration: none;
+    letter-spacing:1px;
+    
+}
+#contact
+{
+    font-size: 20px;
+    font-family: 'roboto';
+    color: #7b9174;
+    margin-bottom:-5px ;
+    text-decoration: none;
+   
+}
+#about
+{
+    font-size: 20px;
+    font-family: 'roboto';
+    color: #7b9174;
+    margin-bottom:-5px ;
+    text-decoration: none;
+   
+}
