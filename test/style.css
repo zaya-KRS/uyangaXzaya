@@ -1,10 +1,13 @@
 :root {
     --color: lightgreen;
+    --small: 12px;
+    --medium: 15px;
 }
 * {
     font-family: sans-serif;
 }
-body {
+body, html {
+    width: 100%;
     margin: 0;
     padding: 0;
     background-color: #000000;
@@ -29,7 +32,6 @@ p {
     color: var(--color);
 }
 header {
-    width: 1185px;
     padding: 2rem;
     margin: auto;
     display: flex;
@@ -42,9 +44,8 @@ header span {
     color: var(--color);
 }
 .first-section {
-    max-width: 100vw;
+    max-width: 100%;
     display: grid;
-    font-size: 1.5em;
     grid-template-columns: 10% 75% 15%;
     text-transform: uppercase;
 }
@@ -53,11 +54,8 @@ header span {
     text-orientation: upright;
     letter-spacing: 12px;
 }
-.first-section > p {
-    margin-top: 4rem;
-} 
-.first-section img {
-    margin: 4rem auto 0;
+.first-section > img {
+    width: 100%;
     border: 1px solid #efefef;
 }
 .first-section span {
@@ -68,7 +66,7 @@ header span {
     margin: 0.5em;
 }
 .second-section {
-    max-width: 100vw;
+    max-width: 100%;
     margin-top: 100px;
     display: flex;
 }
@@ -80,8 +78,8 @@ section > span {
     font-size: 1.2em;
     color: var(--color);
 }
-.second-section > section img {
-    max-width: 500px;
+.second-section > section >img {
+    max-width: 100%;
 }
 .second-section > section:first-of-type {
     padding: 0 3rem;
@@ -146,4 +144,26 @@ section > span {
 }
 .sixth-section span {
     margin: 4rem;
+}
+@media (max-width: 600px) {
+    .first-section > p {
+        margin-top: 4rem;
+    } 
+    .first-section > img {
+        margin: 2rem auto 0;
+    }
+    span {
+        font-size: 13px;
+    }
+}
+@media (min-width: 601px) {
+    header{
+        max-width: 90%;
+    }
+    .first-section > img {
+        margin: 4rem auto 0;
+    }
+    .first-section {
+        font-size: 1.5em;
+    }
 }
